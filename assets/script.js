@@ -19,6 +19,7 @@ const slides = [
 
 const arrow_left = document.getElementsByClassName("arrow_left")[0];
 const arrow_right = document.getElementsByClassName("arrow_right")[0];
+const dots = document.getElementsByClassName("dots")[0];
 
 arrow_left.addEventListener("click", () => {
 	console.log("Fléche gauche cliqué");
@@ -28,3 +29,8 @@ arrow_right.addEventListener("click", () => {
 	console.log("Flèche droite cliqué");
 });
 
+slides.forEach(() => {
+	const dot = document.createElement("div");
+	dot.classList.add("dot");
+	dots.appendChild(dot);
+})
